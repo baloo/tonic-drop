@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package grpc.helloworld;
+
+message Ping {
+  string hello = 1;
+}
+
+message Pong {
+  string world = 1;
+}
+
+service HelloWorld {
+  rpc Hello(Ping) returns (Pong) {}
+}
